@@ -1,0 +1,130 @@
+/* Header */
+#home header {
+  background-size: auto;
+}
+.main-header {
+  background-color: blanchedalmond;
+  width: auto;
+  margin: 2em;
+}
+.main-header .logo img {
+  width: 100px;
+  float: left;
+}
+/* Navigation */
+.main-menu {
+  margin-left: px;
+  font-weight: bold;
+}
+.main-menu ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-right: 25px;
+  border-left: 1px solid rgba(202, 204, 202, 0.6);
+  line-height: 100px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.main-menu ul li a {
+  text-decoration: none;
+  color: black;
+}
+.main-menu ul li a:hover {
+  opacity: 70%;
+}
+.main-menu ul li.active {
+  background: #e9dd72;
+  border: none;
+}
+.main-menu ul li.active a {
+  color: #666;
+}
+/* main */
+main {
+  font-family: Arial, Helvetica, sans-serif;
+}
+main h1,
+h2,
+h3 {
+  color: black;
+}
+/* footer */
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    background: seashell;
+}
+footer .social .fa {
+  padding: 15px;
+  font-size: 15px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 4px;
+  border-radius: 50%;
+  float: right;
+}
+footer .social .fa:hover {
+  opacity: 0.7;
+}
+footer .social .fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+footer .social .fa-instagram {
+  background: #55acee;
+  color: white;
+}
+footer .social .fa-twitter {
+  background: #125688;
+  color: white;
+}
+
+/* Categories */
+#categories {
+  width: 580px;
+  text-align: center;
+  display: flex;
+}
+figcaption {
+  background: seashell;
+  font-weight: bold;
+  padding: 10px;
+}
+/* form */
+
+form #formtext{
+    color: slateblue;
+    font-size: 14px;
+}
+.textbox input[type="text"],
+.textbox input[type="email"]  {
+  width: 250px;
+  border: 1px solid black;
+  height: 200px;
+}
+span.contactinfo2 {
+  font-weight: bold;
+}
+.email {
+  padding-bottom: 15px;
+}
+fieldset {
+  border: 2px solid #9ed034;
+}
+legend {
+  color: #4977d1;
+  font-weight: bold;
+  font-size: 1em;
+  text-transform: uppercase;
+  background-color: #fff;
+}
+label {
+  display: block;
+  margin: 15px 0 0 0;
+  font-weight: bold;
+  font-size: 0.9em;
+  padding-bottom: 10px; 
+}
+

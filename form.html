@@ -1,50 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lim Kuan Loo Minimart</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
     <!--Container starts here-->
     <div id="container">
-        
-        <div class="Main-menu"></div>
-        <div class="logo">
-            <h1>Lim Kuan Loo Minimart</h1>
-        </div>
-        <!--Navigation Starts here-->
-        <nav class="main-menu">
-            <ul>
+      <header>
+        <div class="main-header">
+            <div class="logo">
+                <img src="Images/WhatsApp Image 2022-01-13 at 9.03.40 PM.jpg">
+            </div>
+            <!--Navigation Starts here-->
+            <nav class="main-menu">
+                <ul>
                 <li><a href="/LKLMinimart.html">Home</a></li>
                 <li><a href="/Products.html">Products</a></li>
-                <li><a href="form.html">Delivery</a></li>
-            </ul>
-        </nav>
-        <!--End main navigation-->
+                <li class="active"><a href="form.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--End main navigation-->  
+        </header>  
 
-        <!--Main content-->
-        <Main>
-            
-           <img src="images/minimart.jpeg" alt="Minimart photo" width="1200">
+      <!--Main content-->
+      <main>
+        <img src="images/minimart.jpeg" alt="Minimart photo" width="1200" />
 
-           <h2> Welcome to Lim Kuan Loo Minimart</h2>
-             <p>Penang, Malaysia has long be famous with its fame as “The Best Foodie Place” in Malaysia. 
-           Even with a lot of emerging food fusions of western cuisine and other Asian country specialties, Penang is still well known of its local conventional food choice.
-           LKL Minimart is a grocery store that emplasized at the food quantility and operate more than 80 years in Penang, Malaysia. Fresh and the finest ingredients can be found for local homes and skillful chefs at local restaurants.  </p>
+        <h3>Learn more about us!</h3>
+        <p>
+          Penang, Malaysia has long be famous with its fame as “The Best Foodie
+          Place” in Malaysia. Even with a lot of emerging food fusions of
+          western cuisine and other Asian country specialties, Penang is still
+          well known of its local conventional food choice. LKL Minimart is a
+          grocery store that emplasized at the food quantility and operate more
+          than 80 years in Penang, Malaysia. Fresh and the finest ingredients
+          can be found for local homes and skillful chefs at local restaurants.
+        </p>
+        <ul>
+          <li>
+            Location: Jalan Sungai Emas, Batu Ferringhi, 11100 Pulau Pinang
+          </li>
+          <li>Phone: 04-8813069</li>
+        </ul>
 
-           
-        </main>
-       <!--Main content ends here-->
+        <form>
+            <fieldset>
+                <legend>Sign-up as a member!</legend>
+                <div class="textbox"></div>
+                    <p id="formtext"> Please fill in this form to create an account.</p>
+                    <label>First Name</label>
+                    <input type="text" placeholder="Lim" name="First Name" required>
+                    <label>Last Name</label>
+                    <input type="text" placeholder="Kuan Joo" name="Last Name" required>
+                    <label>Email</label>
+                    <input type="text" placeholder="limkuanjoo@gmail.com" name="Email">
+                    <label>Phone Number</label>
+                    <input type="tel" name="Phone Number">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter Password" name="password">
+                    <label>Repeat Password</label>
+                    <input type="password" placeholder="Repeat Password" name="password">
+                    <input type="submit" class="sumbitbutton">
+                    <input type="reset" class="resetbutton">
+                </div>
+            </fieldset>
+        </form>
+      </main>
+      <!--Main content ends here-->
 
-        <!--footer information-->
-        <footer> &copy; Copy Right 2022</footer>
+      <!--footer information-->
+      <footer>
+        <div class="footer">
+            <span>Sing-up for our news letter!</span>
+            <input type="text" placeholder="Enter Email Address" name="Email" />
+            <input type="submit" class="submit button" />
+        </div>
+        <div id="non-disclaimer">
+            <div class="copy">&copy; Copy Right 2022</div>
+            <div class="social">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-twitter"></a>
+            <div>
+        </div>
+      </footer>
     </div>
-<!--End container-->
-   
-
-</body>
-
-
+    <!--End container-->
+  </body>
 </html>
