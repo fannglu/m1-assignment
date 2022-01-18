@@ -52,8 +52,31 @@ h3 {
 }
 /* footer */
 footer {
+    width: 100%;
+    height: 155px;
+    padding-bottom: 1em;
     font-family: Arial, Helvetica, sans-serif;
     background: seashell;
+    font-size: 20px;
+    color: darkblue;
+    font-weight: bold;
+}
+footer input[type="submit"] {
+    width: 100px;
+    background: cornflowerblue;
+    height: 30px;
+    margin-top: 2em;
+}
+footer input[type="text"] {
+    width: 400px;
+    text-align: center;
+    height: 30px;
+    margin-top: 2em;
+}
+footer .copy {
+    margin-top: 20px;
+    font-size: 14px;
+
 }
 footer .social .fa {
   padding: 15px;
@@ -62,8 +85,9 @@ footer .social .fa {
   text-align: center;
   text-decoration: none;
   margin: 0 4px;
-  border-radius: 50%;
+  border-radius: 80%;
   float: right;
+  
 }
 footer .social .fa:hover {
   opacity: 0.7;
@@ -93,7 +117,7 @@ figcaption {
   padding: 10px;
 }
 /* Products */
-/* Activities */
+
 table {
   width: 1000px;
   margin: 4em auto 0 auto;
@@ -122,7 +146,9 @@ th td {
 table {
   margin-bottom: 2em;
 }
+
 /* form */
+
 
 form #formtext{
     color: slateblue;
@@ -142,13 +168,15 @@ span.contactinfo2 {
 }
 fieldset {
   border: 2px solid #9ed034;
+  margin: 0 7em 1em 7em ;
 }
 legend {
   color: #4977d1;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 30PX;
   text-transform: uppercase;
   background-color: #fff;
+  text-align: center;
 }
 label {
   display: block;
@@ -156,5 +184,12 @@ label {
   font-weight: bold;
   font-size: 0.9em;
   padding-bottom: 10px; 
+}
+fieldset input[type="submit"],
+input[type="reset"] {
+    background: cornflowerblue;
+    width: 8em;
+    display: block;
+    margin-top: 2em;
 }
 
