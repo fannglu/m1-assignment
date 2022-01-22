@@ -73,9 +73,12 @@ footer input[type="text"] {
     height: 30px;
     margin-top: 2em;
 }
+
 footer .copy {
     margin-top: 20px;
     font-size: 14px;
+    float: left;
+    padding-bottom: 10px;
 
 }
 footer .social .fa {
@@ -106,7 +109,7 @@ footer .social .fa-twitter {
 }
 
 /* Categories */
-#categories {
+.categories {
   width: 580px;
   text-align: center;
   display: flex;
