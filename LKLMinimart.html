@@ -38,45 +38,62 @@
       <main>
         <div class="mainbody">
             <h1>Welcome to Lim Kuan Joo Minimart </h1> 
-             
-            <h3>Categories</h3>
-
-            <div class="categories">
-                <figure>
-                    <figcaption>All Products</figcaption>
-                    <img src="Images/grocery-allproduct.jpeg" width="500px" height="300px" alt="alcohol">
-                </figure>
-                <figure> 
-                    <figcaption>Alcohol</figcaption>
-                    <img src="Images/Category/alcohol.jpeg" width="500px" height="300px" alt="alcohol" />
-                </figure>
-            </div>
-            <div class="categories">
-                <figure>
-                    <figcaption>Beverages</figcaption>
-                    <img src="Images/Category/beverages.jpeg" width="500px" height="300px" alt="beverages" />
-                </figure>
-                <figure>
-                    <figcaption>Fruits & Vegetables</figcaption>
-                    <img src="Images/Category/fruits.jpeg" width="500px" height="300px" alt="Fruits and Vegetables" />
-                </figure>
-            </div>
-             <div class="categories">
-                <figure>
-                    <figcaption>Groceries</figcaption>
-                        <img src="Images/Category/pantry.jpeg" width="500px" height="300px" alt="Groceries" />
-                    </li>
-                </figure>
-                <figure>
-                    <figcaption>Household</figcaption>
-                    <img src="Images/Category/Household-cleaning-products.jpeg" width="500px" height="300px" alt="household" />
-                </figure>
-            </div>
-            <div class="categories">
-                <figure>
-                    <figcaption>Pet</figcaption>
-                        <img src="Images/Category/petsupplies.jpeg" width="500px" height="300px" alt="pet supplies" />
-                </figure>
+            <h3>Categories</h3> 
+           
+            <div id="categories"> 
+            
+                <!-- <div class="categories">
+                    <figure>
+                        <img src="images/grocery-allproduct.jpeg" width="500px" height="300px" alt="alcohol">
+                        <figcaption> Category All Products 1</figcaption>
+                    </figure>
+                    <figure> 
+                        
+                        <img src="images/Category/promo.jpeg" width="500px" height="300px" alt="alcohol"/>
+                        <figcaption>Category Promotions 1</figcaption>
+                    </figure>
+                </div>
+                <div class="categories">
+                    <figure>
+                        <img src="images/Category/dryfood.jpeg" width="500px" height="300px" alt="alcohol">
+                        <figcaption>Category Dry Food 1</figcaption>
+                    </figure>
+                    <figure> 
+                        
+                        <img src="images/Category/alcohol.jpeg" width="500px" height="300px" alt="alcohol"/>
+                        <figcaption>Category Alcohol</figcaption>
+                    </figure>
+                </div>
+                <div class="categories">
+                    <figure>
+                        <img src="images/Category/beverages.jpeg" width="500px" height="300px" alt="beverages" />
+                        <figcaption>Category Beverages 1</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/Category/fruits.jpeg" width="500px" height="300px" alt="Fruits and Vegetables" />
+                        <figcaption>Category Fruits & Vegetables 1</figcaption>
+                    </figure>
+                </div>
+                <div class="categories">
+                    <figure>
+                        <img src="images/Category/pantry.jpeg" width="500px" height="300px" alt="Groceries" />
+                        <figcaption>Category Groceries 1</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/Category/Household-cleaning-products.jpeg" width="500px" height="300px" alt="household" />
+                        <figcaption>Household</figcaption>
+                    </figure>
+                </div>
+                <div class="categories">
+                    <figure>
+                        <img src="images/Category/petsupplies.jpeg" width="500px" height="300px" alt="pet supplies" />
+                        <figcaption>Category Pet</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/Category/togosupplies.jpeg" width="500px" height="300px" alt="pet supplies" />
+                        <figcaption>Category Take Out Supplies</figcaption>
+                    </figure>
+                </div> -->
             </div>
         </div>
       </main>
@@ -99,8 +116,38 @@
                 <div>
             </div>
         </div>
+
+        
       </footer>
+      
     </div>
     <!--End container-->
+    <script>
+        var photos = []; //Declare an empty array to store img element
+        var fileNames = ['dryfood', 'alcohol', 'beverages', 'fruits', 'Household-cleaning-products', 'pantry', 'petsupplies', 'promo', 'togosupplies', 'vegetables' ]; //empty array to store image file names 
+        var imageList = [];  // empty array to store html list that contains an image element
+        var image; //Declare an empty variable to store the assembled image list codes
+        var openDiv = "<div id='photo'>"; // a variable that contain open list
+        var closeDiv = "</div>"; //a variable that contains close list element 
+        var productDescription = ['Dry Food', 'Alcohol', 'Beverages', 'Fruits', 'Household Cleaning Products', 'Pantry', 'Petsupplies', 'Promo', 'Togo Supplies', 'Vegetables' ]
+        var productCaption = ['Dry Food2', 'Alcohol2', 'Beverages2', 'Fruits2', 'Household Cleaning Products2', 'Pantry2', 'Petsupplies2', 'Promo2', 'Togo Supplies2', 'Vegetables2' ]
+        var openCap = "<p class='productCaption'>";
+        var closeCap = "</p>";
+
+
+        //Create a loop to create 10 images starting with index of 0
+        for (var i= 0; i < 10; i++) {
+        // fileNames.push("Category"+(i+1)); //generate filename and store in the array
+        photos.push("<img src='Images/Category/" + fileNames[i] + ".jpeg' alt='Product Category " + fileNames[i] + "' width='340'> " ) ; //assenble full image element 
+        image = openDiv + photos[i] + closeDiv + openCap +  productCaption[i] + closeCap + "<p class='productDescription'>"+ productDescription[i]+"</p>" ; //assemble the entire image list and store in variable
+        imageList.push(image);// store full image list in array 
+        }
+        
+        
+        document.getElementById('categories').innerHTML = imageList.join(" ");
+        
+                
+
+    </script>
   </body>
 </html>

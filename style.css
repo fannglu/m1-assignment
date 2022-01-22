@@ -50,6 +50,9 @@ h2,
 h3 {
   color: black;
 }
+#categories #photo .productCaption{
+  background: red;
+}
 /* footer */
 footer {
     width: 100%;
@@ -195,4 +198,5 @@ input[type="reset"] {
     display: block;
     margin-top: 2em;
 }
+
 
