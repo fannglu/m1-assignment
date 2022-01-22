@@ -133,13 +133,15 @@
         var productCaption = ['Dry Food2', 'Alcohol2', 'Beverages2', 'Fruits2', 'Household Cleaning Products2', 'Pantry2', 'Petsupplies2', 'Promo2', 'Togo Supplies2', 'Vegetables2' ]
         var openCap = "<p class='productCaption'>";
         var closeCap = "</p>";
+        var openDes = "<p class='productDescription'>";
+        var closeDes = "</p>";
 
 
         //Create a loop to create 10 images starting with index of 0
         for (var i= 0; i < 10; i++) {
         // fileNames.push("Category"+(i+1)); //generate filename and store in the array
         photos.push("<img src='Images/Category/" + fileNames[i] + ".jpeg' alt='Product Category " + fileNames[i] + "' width='340'> " ) ; //assenble full image element 
-        image = openDiv + photos[i] + closeDiv + openCap +  productCaption[i] + closeCap + "<p class='productDescription'>"+ productDescription[i]+"</p>" ; //assemble the entire image list and store in variable
+        image = openDiv + photos[i] + closeDiv + openDes + productDescription[i] + closeDes + openCap +  productCaption[i] + closeCap  ; //assemble the entire image list and store in variable
         imageList.push(image);// store full image list in array 
         }
         

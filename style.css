@@ -50,8 +50,8 @@ h2,
 h3 {
   color: black;
 }
-#categories #photo .productCaption{
-  background: red;
+#categories #photo .productDescription {
+  background: red; 
 }
 /* footer */
 footer {
