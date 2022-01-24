@@ -22,7 +22,8 @@
             <!--Navigation Starts here-->
             <nav class="main-menu">
                 <ul>
-                <li class="active"><a href="/LKLMinimart.html">Home</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li class="active"><a href="/category.html">Categories</a></li>
                 <li><a href="/Products.html">Products</a></li>
                 <li><a href="form.html">About Us</a></li>
                 </ul>
@@ -129,26 +130,25 @@
         var image; //Declare an empty variable to store the assembled image list codes
         var openDiv = "<div id='photo'>"; // a variable that contain open list
         var closeDiv = "</div>"; //a variable that contains close list element 
-        var productDescription = ['Dry Food', 'Alcohol', 'Beverages', 'Fruits', 'Household Cleaning Products', 'Pantry', 'Petsupplies', 'Promo', 'Togo Supplies', 'Vegetables' ]
-        var productCaption = ['Dry Food2', 'Alcohol2', 'Beverages2', 'Fruits2', 'Household Cleaning Products2', 'Pantry2', 'Petsupplies2', 'Promo2', 'Togo Supplies2', 'Vegetables2' ]
-        var openCap = "<p class='productCaption'>";
-        var closeCap = "</p>";
-        var openDes = "<p class='productDescription'>";
-        var closeDes = "</p>";
+        var productDescription = ['Dried Beans and Peas', 'Wine & Beer', 'Box drinks & Canned Drinks', 'Orange, Pear, Apple', 'Cleaning Supplies', 'Canned Goods', 'Pet Food', 'Promotion', 'To-Go Boxes and Untensils', 'Organic Vegetables' ]
+        var productCaption = ['Dry Food', 'Alcohol', 'Beverages', 'Fruits', 'Household Cleaning Products', 'Pantry', 'Petsupplies', 'Promo', 'Togo Supplies', 'Vegetables' ]
+        var openCap = "<figcaption class='productCaption'>";
+        var closeCap = "</figcaption>";
+        var openDes = "<p class='productDescription'>"; 
+        var closeDes = "</p>"; 
 
 
         //Create a loop to create 10 images starting with index of 0
         for (var i= 0; i < 10; i++) {
         // fileNames.push("Category"+(i+1)); //generate filename and store in the array
-        photos.push("<img src='Images/Category/" + fileNames[i] + ".jpeg' alt='Product Category " + fileNames[i] + "' width='340'> " ) ; //assenble full image element 
-        image = openDiv + photos[i] + closeDiv + openDes + productDescription[i] + closeDes + openCap +  productCaption[i] + closeCap  ; //assemble the entire image list and store in variable
+        photos.push("<img src='Images/Category/" + fileNames[i] + ".jpeg' alt='Product Category " + fileNames[i] + " ' `> "  ) ; //assenble full image element 
+        image = openDiv + photos[i] + openDes + productDescription[i] + closeDes + openCap +  productCaption[i] + closeCap + closeDiv  ; //assemble the entire image list and store in variable
         imageList.push(image);// store full image list in array 
         }
         
         
-        document.getElementById('categories').innerHTML = imageList.join(" ");
-        
-                
+        document.getElementById("categories").innerHTML = imageList.join(" ");
+                    
 
     </script>
   </body>
