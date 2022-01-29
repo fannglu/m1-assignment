@@ -120,13 +120,10 @@ footer .social .fa-twitter {
 #categories img {
   width: 500px;
   height: 380px;
-
-
 }
 #photo {
   margin: 0 2em;
 }
-
 #categories figcaption {
   background: seashell;
   width: 480px;
@@ -146,6 +143,30 @@ footer .social .fa-twitter {
   font-weight: bold;
   text-align: center;
   font-size: large;
+}
+#infoBox {
+  background: black;
+  height: 300px;
+  width: 30%;
+  position: absolute;
+  top: 400px;
+  left: 30%;
+}
+#title {
+  color: white; 
+  border: 1px solid blue;
+  height: 20px;
+}
+#desc {
+  color: white;
+  border: 1px solid green;
+  height: 20px;
+}
+
+#closeINFO {
+  color: white;
+  border: 1px solid red;
+  height: 20px;
 }
 /* Products */
 
