@@ -139,7 +139,8 @@
         var productCaption = ['Dry Food', 'Alcohol', 'Beverages', 'Fruits', 'Household Cleaning Products', 'Pantry', 'Petsupplies', 'Promo', 'Togo Supplies', 'Vegetables' ]
         var openCap = "<figcaption class='productCaption'>";
         var closeCap = "</figcaption>";
-        var openDes = "<p class='productDescription' onclick='viewPD'>"; 
+        var openDes = "<p class='productDescription' id='CatDes' onClick='viewPD("; 
+        var cDescClose = ")'>";
         var closeDes = "</p>"; 
 
 
@@ -147,7 +148,7 @@
         for (var i= 0; i < 10; i++) {
         // fileNames.push("Category"+(i+1)); //generate filename and store in the array
         photos.push("<img src='Images/Category/" + fileNames[i] + ".jpeg' alt='Product Category " + fileNames[i] + " ' `> "  ) ; //assenble full image element 
-        image = openDiv + photos[i] + openDes + productDescription[i] + openDesc + i + openDescClose + closeDesc + closeDes + openCap +  productCaption[i] + closeCap + closeDiv  ; //assemble the entire image list and store in variable
+        image = openDiv + photos[i] + openDes + i + cDescClose + productDescription[i] + closeDes + openCap +  productCaption[i] + closeCap + closeDiv  ; //assemble the entire image list and store in variable
         imageList.push(image);// store full image list in array 
         }   
         document.getElementById("categories").innerHTML = imageList.join(" ");
@@ -162,9 +163,6 @@
             'Grapes, Citrus Fruits, Berries, Pear, Kiwi, Banana, Cut and Packaged Fruits, Tropical and Exotic Fruits, Apples, Melons, Stone Fruits', 
             'Diswashing, Paper and Plastic, Laundry, Cleaning Supplies', 'Condense Milk, Canned Vegies and Fruits, Canned beans, Pasta Paste, Canned Tomato', 'Pet Toys, Pet Food, Pet Supplies', 'Best Deal you can find!', 'Pastics Utensils, Sustainable Boxes, To-go Boxes', 'Fresh Vegies and Packed'];
             var closePop = "Click This to Close"; 
-            var openDesc = "<button id='CatDes' onClick='viewPD(";
-            var openDescClose = ")'>";
-            var closeDesc = "</button>"
         
             function viewPD(i) {
                 document.getElementsById("infoBox").style.visibility;
