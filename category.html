@@ -139,15 +139,17 @@
         var productCaption = ['Dry Food', 'Alcohol', 'Beverages', 'Fruits', 'Household Cleaning Products', 'Pantry', 'Petsupplies', 'Promo', 'Togo Supplies', 'Vegetables' ]
         var openCap = "<figcaption class='productCaption'>";
         var closeCap = "</figcaption>";
-        var openDes = "<p class='productDescription' id='CatDes' onClick='viewPD("; 
+        var openDes = "<button class='productDescription' onClick='viewPD("; 
         var cDescClose = ")'>";
-        var closeDes = "</p>"; 
+        var closeDes = "</button>"; 
+        var des = [];
 
 
         //Create a loop to create 10 images starting with index of 0
         for (var i= 0; i < 10; i++) {
         // fileNames.push("Category"+(i+1)); //generate filename and store in the array
         photos.push("<img src='Images/Category/" + fileNames[i] + ".jpeg' alt='Product Category " + fileNames[i] + " ' `> "  ) ; //assenble full image element 
+        des.push(openPtitle + productDescription[i] + closePtitle + "<p>" + pInfo + "</p><br>" + closePop)
         image = openDiv + photos[i] + openDes + i + cDescClose + productDescription[i] + closeDes + openCap +  productCaption[i] + closeCap + closeDiv  ; //assemble the entire image list and store in variable
         imageList.push(image);// store full image list in array 
         }   
@@ -170,6 +172,8 @@
                 document.getElementById("desc").innerHTML = pInfo[i];
                 document.getElementById("closeINFO").innerHTML = closePop;
             }
+
+            
 
             // pDescription.addEventListener("click", viewPD)
 

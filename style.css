@@ -132,17 +132,19 @@ footer .social .fa-twitter {
   position: relative;
   bottom: 150px;
   text-align: center;
+  margin-top: 2em;
 }
 #categories .productDescription {
   position: relative;
+  display: block;
   bottom: 8em;
-  background: rgba(251, 250, 250, 0.8);
+  background: rgba(240, 160, 160, 0.8);
   padding: 2em;
   width: 400px;
-  margin-left: 13px;
+  margin-left: 3em;
   font-weight: bold;
   text-align: center;
-  font-size: large;
+  font-size: large
 }
 #infoBox {
   background: black;
@@ -150,7 +152,7 @@ footer .social .fa-twitter {
   width: 30%;
   position: absolute;
   top: 400px;
-  left: 30%;
+  left: 60%;
 }
 #title {
   color: white; 
