@@ -50,8 +50,7 @@ h2,
 h3 {
   color: black;
 }
-#categories #photo .productDescription {
-}
+
 /* footer */
 footer {
   width: 100%;
@@ -153,7 +152,13 @@ footer .social .fa-twitter {
   position: absolute;
   top: 400px;
   left: 60%;
+  /* visibility: hidden; */
 }
+
+.hide {
+  display: none;
+}
+
 #title {
   color: white; 
   border: 1px solid blue;
@@ -163,12 +168,14 @@ footer .social .fa-twitter {
   color: white;
   border: 1px solid green;
   height: 20px;
+  margin-top: 5em;
 }
 
 #closeINFO {
   color: white;
   border: 1px solid red;
   height: 20px;
+  margin-top: 5em;
 }
 /* Products */
 

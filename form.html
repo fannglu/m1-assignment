@@ -62,10 +62,24 @@
                     <input type="text" placeholder="Lim" name="First Name" required>
                     <label>Last Name</label>
                     <input type="text" placeholder="Kuan Joo" name="Last Name" required>
-                    <label>Email</label>
-                    <input type="text" placeholder="limkuanjoo@gmail.com" name="Email">
+                    <!-- <label>Email</label>
+                    <input type="text" placeholder="limkuanjoo@gmail.com" name="Email"> -->
                     <label>Phone Number</label>
                     <input type="tel" name="Phone Number" placeholder="04-8813069">
+                    
+                    <div class="radios">
+                      <label>Would you like to subscribe to learn more about discounts?</label> 
+                      <input id="phone" type="radio" name="contact" value="Phone" onclick="smsSub()"/> SMS Subcription
+                      <input id="email" type="radio" name="Email Subcription Contact" value="Email" onclick="emailSub()"/> Email Subcription
+                    </div>
+                    <div id="subInfo" style="display:none;">
+                      
+                      <label id="emailAdd2" ></label>
+                      <label id="telnumber1" ></label>
+                      <input id="telnum" type="tel" placeholder='04-8813069' name='Phone'>
+                      <label id="emailAdd2" ></label>
+                      <input id="emailAdd" type='text' placeholder='limkuanjoo@gmail.com' name='Email'>
+                    </div>
                     <label>Password</label>
                     <input type="password" placeholder="Enter Password" name="password">
                     <label>Repeat Password</label>
@@ -94,6 +108,23 @@
                         <a href="#" class="fa fa-twitter"></a>
                     <div>
              </div>
+
+             <script>
+               
+                function emailSub() {
+                  let text = "Subsribe using your email"
+                  document.getElementById('subInfo').style.display = 'block';
+                  document.getElementById('emailAdd2').innerHTML = text;
+                }
+
+                function smsSub() {
+                  let text = "Subsribe using your phone number"
+                  document.getElementById('subInfo').style.display = 'block';
+                  document.getElementById('emailAdd2').innerHTML = text;
+                }
+                
+
+             </script>
       </footer>
     </div>
     <!--End container-->
