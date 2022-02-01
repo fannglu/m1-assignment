@@ -73,8 +73,6 @@
                       <input id="email" type="radio" name="Email Subcription Contact" value="Email" onclick="emailSub()"/> Email Subcription
                     </div>
                     <div id="subInfo" style="display:none;">
-                      
-                      <label id="emailAdd2" ></label>
                       <label id="telnumber1" ></label>
                       <input id="telnum" type="tel" placeholder='04-8813069' name='Phone'>
                       <label id="emailAdd2" ></label>
@@ -114,13 +112,15 @@
                 function emailSub() {
                   let text = "Subsribe using your email"
                   document.getElementById('subInfo').style.display = 'block';
+                  document.getElementById('telnum').style.visibility = 'hidden';
                   document.getElementById('emailAdd2').innerHTML = text;
                 }
 
                 function smsSub() {
                   let text = "Subsribe using your phone number"
                   document.getElementById('subInfo').style.display = 'block';
-                  document.getElementById('emailAdd2').innerHTML = text;
+                  document.getElementById('telnumber1').innerHTML = text;
+                  document.getElementById('emailAdd').style.visibility = 'hidden';
                 }
                 
 
