@@ -137,6 +137,7 @@
         var closeDiv = "</div>"; //a variable that contains close list element 
         var productDescription = ['Dried Beans and Peas', 'Wine & Beer', 'Box drinks & Canned Drinks', 'Orange, Pear, Apple', 'Cleaning Supplies', 'Canned Goods', 'Pet Food', 'Promotion', 'To-Go Boxes and Utensils', 'Organic Vegetables' ]
         var productCaption = ['Dry Food', 'Alcohol', 'Beverages', 'Fruits', 'Household Cleaning Products', 'Pantry', 'Petsupplies', 'Promo', 'Togo Supplies', 'Vegetables' ]
+        
         var openCap = "<figcaption class='productCaption'>";
         var closeCap = "</figcaption>";
         var openDes = "<button class='productDescription' id='CatDes' onclick='viewPD("; 
@@ -161,11 +162,11 @@
         openDiv + 
         photos[i] + 
         openCap +
-        openDes + i + cDescClose + productCaption[i] + closeDes + 
+        productDescription[i] +
+        openDes + i + cDescClose +  productCaption[i] + closeDes + 
         closeCap +
         openPinformation  + 
         openInfo +
-        pInfo[i] + 
         closeInfo +
         closePimfomation + 
         closeDiv ; //assemble the entire image list and store in variable
@@ -174,20 +175,14 @@
         }   
         document.getElementById("categories").innerHTML = imageList.join(" ");
         
-        // On MouseOver on product captiom 
-
-
-            function viewPD(i) {
-                document.getElementsById("infoBox").style.visibility;
-                document.getElementById("title").innerHTML = productDescription[i];
-                document.getElementById("desc").innerHTML = pInfo[i];
-                document.getElementById("closeINFO").innerHTML = closePop;
-            }
-
-            // pDescription.addEventListener("click", viewPD)
-
-
-    
+        // On MouseOver on product caption 
+        function viewPD(i) {
+            document.getElementById("infoBox").style.visibility ="visible";
+            document.getElementById("title").innerHTML = productDescription[i];
+            document.getElementById("desc").innerHTML = pInfo[i];
+            document.getElementById("closeINFO").innerHTML = closePop;
+        }
+   
 
     </script>
   </body>

@@ -132,6 +132,8 @@ footer .social .fa-twitter {
   bottom: 150px;
   text-align: center;
   margin-top: 2em;
+  height: 2em;
+  margin-top: 8em;
 }
 #categories .productDescription {
   position: relative;
