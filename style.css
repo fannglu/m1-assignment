@@ -145,16 +145,20 @@ footer .social .fa-twitter {
   margin-left: 3em;
   font-weight: bold;
   text-align: center;
-  font-size: large
+  font-size: large;
+  visibility: hidden;
+}
+#categories #photo:hover .productDescription {
+  visibility: visible;
 }
 #infoBox {
-  background: black;
-  height: 300px;
-  width: 30%;
+  background: rgba(104, 154, 236, 0.75);
+  height: 250px;
+  width: 50%;
   position: absolute;
   top: 400px;
   left: 60%;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
 .hide {
@@ -162,22 +166,18 @@ footer .social .fa-twitter {
 }
 
 #title {
-  color: white; 
-  border: 1px solid blue;
-  height: 20px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  
 }
 #desc {
   color: white;
-  border: 1px solid green;
-  height: 20px;
-  margin-top: 5em;
+  
 }
 
 #closeINFO {
   color: white;
-  border: 1px solid red;
-  height: 20px;
-  margin-top: 5em;
+  
 }
 /* Products */
 

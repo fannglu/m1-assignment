@@ -60,6 +60,7 @@ var pInfo = [
 ];
 var closePop = "Click This to Close";
 
+
 //Create a loop to create 10 images starting with index of 0
 for (var i = 0; i < 10; i++) {
   // fileNames.push("Category"+(i+1)); //generate filename and store in the array
@@ -75,11 +76,11 @@ for (var i = 0; i < 10; i++) {
     openDiv +
     photos[i] +
     openCap +
-    productDescription[i] +
+    productCaption[i] +
     openDes +
     i +
     cDescClose +
-    productCaption[i] +
+    productDescription[i] +
     closeDes +
     closeCap +
     closeDiv; //assemble the entire image list and store in variable
@@ -94,4 +95,10 @@ function viewPD(i) {
   document.getElementById("title").innerHTML = productCaption[i];
   document.getElementById("desc").innerHTML = pInfo[i];
   document.getElementById("closeINFO").innerHTML = closePop;
+}
+
+var closeinfo = document.getElementById("closeINFO"); 
+closeinfo.addEventListener("click",hideInfo); 
+function hideInfo() {
+  document.getElementById("infoBox").style.visibility = "hidden";
 }

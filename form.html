@@ -66,18 +66,22 @@
                     <input type="text" placeholder="limkuanjoo@gmail.com" name="Email"> -->
                     <label>Phone Number</label>
                     <input type="tel" name="Phone Number" placeholder="04-8813069">
-                    
-                    <div class="radios">
-                      <label>Would you like to subscribe to learn more about discounts?</label> 
-                      <input id="phone" type="radio" name="contact" value="Phone" onclick="smsSub()"/> SMS Subcription
-                      <input id="email" type="radio" name="Email Subcription Contact" value="Email" onclick="emailSub()"/> Email Subcription
+                    <p>Would you like to subscribe to learn more about discounts?</p> 
+                    <select id="dropdown">
+                      <option>Select one
+                      <option id="phone" name="contact" value="Phone"> SMS Subcription
+                      <option id="email" name="Email Subcription Contact" value="Email"> Email Subcription
+                    </select>
+                    <div id="subPhone" style="display:none">
+                      <label>Add you phone here</label>
+                      <input id="telNum" type="tel" placeholder='04-8813069' name='Phone'>
                     </div>
-                    <div id="subInfo" style="display:none;">
-                      <label id="telnumber1" ></label>
-                      <input id="telnum" type="tel" placeholder='04-8813069' name='Phone'>
-                      <label id="emailAdd2" ></label>
+                    <div id="subEmail" style="display:none">
+                      <label>Add your email here!</label>
                       <input id="emailAdd" type='text' placeholder='limkuanjoo@gmail.com' name='Email'>
                     </div>
+
+
                     <label>Password</label>
                     <input type="password" placeholder="Enter Password" name="password">
                     <label>Repeat Password</label>
@@ -107,22 +111,31 @@
                     <div>
              </div>
 
-             <script>
-               
-                function emailSub() {
-                  let text = "Subsribe using your email"
-                  document.getElementById('subInfo').style.display = 'block';
-                  document.getElementById('telnum').style.visibility = 'hidden';
-                  document.getElementById('emailAdd2').innerHTML = text;
-                }
+             <script> 
 
-                function smsSub() {
-                  let text = "Subsribe using your phone number"
-                  document.getElementById('subInfo').style.display = 'block';
-                  document.getElementById('emailAdd').style.visibility = 'hidden';
-                  document.getElementById('telnumber1').innerHTML = text;
+                function showhidediv() {
+                  var selectEmail = document.getElementById("email");
+                  var selectPhone = document.getElementById("phone");
+                  var inputEmail = document.getElementById("emailAdd");
+                  var inputPhone = document.getElementById("telNum");
+                  
+
+
+                  if (selectEmail.selected) {
+                    inputEmail.style.display = "block";
+                    inputPhone.style.display = "none";
+                  } else if (selectPhone.selected) {
+                    inputPhone.style.display = "block";
+                    inputEmail.style.display = "none";
+                  } else {
+                    inputEmail.style.display = "none";
+                    inputPhone.style.display = "none";
+                  }
+                  console.log(option.value)
                 }
-                
+              
+                var option = document.getElementById("dropdown");
+                option.addEventListener("change", showhidediv);        
 
              </script>
       </footer>
