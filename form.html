@@ -64,9 +64,10 @@
                     <input type="text" placeholder="Kuan Joo" name="Last Name" required>
                     <!-- <label>Email</label>
                     <input type="text" placeholder="limkuanjoo@gmail.com" name="Email"> -->
-                    <label>Phone Number</label>
-                    <input type="tel" name="Phone Number" placeholder="04-8813069">
-                    <p>Would you like to subscribe to learn more about discounts?</p> 
+                    <label>Gender</label>
+                    <input type="radio" name="Female"><span class="gender">Female</span>
+                    <input type="radio" name="Female"><span class="gender">Male</span>
+                    <label>Would you like to subscribe to learn more about discounts?</label> 
                     <select id="dropdown">
                       <option>Select one
                       <option id="phone" name="contact" value="Phone"> SMS Subcription
@@ -116,8 +117,8 @@
                 function showhidediv() {
                   var selectEmail = document.getElementById("email");
                   var selectPhone = document.getElementById("phone");
-                  var inputEmail = document.getElementById("emailAdd");
-                  var inputPhone = document.getElementById("telNum");
+                  var inputEmail = document.getElementById("subEmail");
+                  var inputPhone = document.getElementById("subPhone");
                   
 
 

@@ -139,7 +139,7 @@ footer .social .fa-twitter {
   position: relative;
   display: block;
   bottom: 8em;
-  background: rgba(240, 160, 160, 0.8);
+  background: rgba(241, 233, 233, 0.8);
   padding: 2em;
   width: 400px;
   margin-left: 3em;
@@ -152,31 +152,33 @@ footer .social .fa-twitter {
   visibility: visible;
 }
 #infoBox {
-  background: rgba(104, 154, 236, 0.75);
+  background: rgb(124, 213, 255);
+  padding: 1em;
   height: 250px;
-  width: 50%;
+  width: 25%;
   position: absolute;
   top: 400px;
-  left: 60%;
+  left: 70%;
   visibility: hidden;
+  border-radius: 10px;
+  text-align: center;
+  
 }
-
-.hide {
-  display: none;
-}
-
 #title {
   color: rgb(0, 0, 0);
   font-size: 20px;
+  padding-bottom: 15px;
+  font-weight: bolder;
   
 }
 #desc {
-  color: white;
+  color: black;
   
 }
 
 #closeINFO {
-  color: white;
+  color: black;
+  font-weight: bold;
   
 }
 /* Products */
@@ -253,4 +255,7 @@ input[type="reset"] {
   width: 8em;
   display: block;
   margin-top: 2em;
+}
+.gender {
+  font-size: 15px;
 }
