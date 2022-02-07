@@ -102,3 +102,32 @@ closeinfo.addEventListener("click",hideInfo);
 function hideInfo() {
   document.getElementById("infoBox").style.visibility = "hidden";
 }
+//  JQuery Image pop up 
+$(document).ready(function() {
+ $('img').click(function() {
+   $('.backdrop').animate({'opacity':'.50'}, 300, 'linear').css('display', 'block');
+   $('.box').fadeIn();
+
+   if ($('.box').contents('img')) {
+    $('.box').contents().remove('img'); //If true, clear image
+    }
+
+    var $imgCat = $(this).clone();
+
+    $('.box').append($imgCat);
+
+
+    console.log($imgCat)
+
+  });
+
+ $(".close, .backdrop").click(function () {
+   $(".backdrop").animate({ opacity: "0" }, 300, "linear", function () {
+     $(".backdrop").css("display", "none");
+   });
+   $(".box").fadeOut();
+ });
+
+
+  
+});
